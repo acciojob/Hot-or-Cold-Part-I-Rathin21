@@ -1,14 +1,15 @@
 //your code here
 
 function GenerateRandom(){
-	let x=Math.floor((Math.random()*20)+1);
-	// document.getElementById("num").innerHTML=x;
+	let x=Math.floor((Math.random() * 20) + 1);
+	document.getElementById("num").innerHTML=x;
+	let generatedValue=document.getElementById("num").innerHTML;
 	let guessedValue=document.getElementById("guess").value;
-	if(Math.abs(x-guessedValue)<=5)
+	if(Math.abs(generatedValue-guessedValue)==0)
 	{
-		document.getElementById("num").innerHTML="Hot";
+		document.getElementById("respond").innerHTML="Hot";
 	}
 	else{
-		document.getElementById("num").innerHTML="Cold";
+		document.getElementById("respond").innerHTML="Cold";
 	}
 }
